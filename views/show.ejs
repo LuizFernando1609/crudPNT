@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crud Luana</title>
+</head>
+
+<body>
+    <h2>Registros feitos</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Sobrenome</td>
+                <td>data</td>
+                <td>casa</td>
+                <td>escola</td>
+                <td>senha</td>
+                <td>Ação</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% crud.forEach(function(details) { %>
+                <tr>
+                    <td>
+                        <%= details.name %>
+                    </td>
+                    <td>
+                        <%= details.surname %>
+                    </td>
+                    <td>
+                        <%= details.casa %>
+                    </td>
+                    <td>
+                        <%= details.data %>
+                    </td>
+                    <td>
+                        <%= details.escola %>
+                    </td>
+                    <td>
+                        <%= details.senha %>
+                    </td>
+                    <td><a href="/edit/<%= details._id %>">Editar</a> ou <a href="/delete/<%= details._id %>">Deletar</a>
+                    </td>
+                </tr>
+                <% }) %>    
+        </tbody>
+    </table> <button><a href="/index">Novo</a></button>
+    <p>
+    <button type="submit"><a href="https://www.google.com/search?q=ete+gp&oq=ete+gp&aqs=chrome..69i57.2711j0j9&sourceid=chrome&ie=UTF-8">Site foi feito:</button>
+    </p>
+</body>
+
+</html>
